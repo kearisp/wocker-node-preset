@@ -1,17 +1,23 @@
 {
     "name": "node",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "type": "dockerfile",
     "dockerfile": "./Dockerfile",
     "buildArgsOptions": {
         "NODE_VERSION": {
             "type": "select",
             "options": [
-                "14-alpine3.14",
-                "16-alpine3.14",
-                "17-alpine3.14",
-                "18-alpine3.14",
-                "20-alpine3.18"
+                "14",
+                "16",
+                "17",
+                "18",
+                "20",
+                "21",
+                "22",
+                "23.7",
+                "23.8",
+                "23.9",
+                "23"
             ]
         }
     },
