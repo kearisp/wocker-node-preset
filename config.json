@@ -1,10 +1,11 @@
 {
     "name": "node",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "type": "dockerfile",
     "dockerfile": "./Dockerfile",
     "buildArgsOptions": {
         "IMAGE_VERSION": {
+            "message": "Image version",
             "type": "select",
             "required": true,
             "options": [
