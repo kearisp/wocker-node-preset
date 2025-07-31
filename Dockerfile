@@ -13,6 +13,7 @@ ENV VIRTUAL_PORT=80 \
     NPM_RUN="npm start" \
     PACKAGE_MANAGER="npm"
 
+COPY ./.wocker/etc/wocker-init.d /etc/wocker-init.d
 COPY --chown=${UID}:${UID} ./.wocker/bin/ws-run-hook.sh /usr/local/bin/ws-run-hook
 COPY --chown=${UID}:${UID} ./.wocker/bin/entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 
