@@ -3,7 +3,7 @@ ARG IMAGE_VERSION="${NODE_VERSION}-alpine"
 FROM node:${IMAGE_VERSION}
 
 LABEL org.wocker.preset="node" \
-      org.wocker.version="1.0.5" \
+      org.wocker.version="1.0.6" \
       org.wocker.description="Preset for node projects"
 
 ARG UID=1000
@@ -18,8 +18,6 @@ COPY --chown=${UID}:${UID} ./.wocker/bin/ws-run-hook.sh /usr/local/bin/ws-run-ho
 COPY --chown=${UID}:${UID} ./.wocker/bin/entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 
 RUN set -e; \
-    ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && \
-    echo $TZ > /etc/timezone && \
     if grep -q "Alpine" /etc/os-release; then \
         apk --update --no-cache add bash; \
     fi && \
