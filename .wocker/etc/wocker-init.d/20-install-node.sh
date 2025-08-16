@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 if [ "$NODE_VERSION" != "" ] && [ "$NODE_VERSION" != "none" ]; then
     if [ -f "package.json" ] && [ ! -d "node_modules" ]; then
