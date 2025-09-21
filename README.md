@@ -1,6 +1,6 @@
 # Node preset for Wocker
 
-[![Version](https://img.shields.io/badge/version-1.0.7-blue.svg)](https://github.com/kearisp/wocker-node-preset)
+[![Version](https://img.shields.io/badge/version-1.0.8-blue.svg)](https://github.com/kearisp/wocker-node-preset)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)
 
 A lightweight and efficient preset for developing node.js applications with the Wocker workspace.
