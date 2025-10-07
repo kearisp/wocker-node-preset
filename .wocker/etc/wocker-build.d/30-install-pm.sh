@@ -2,7 +2,7 @@
 
 set -e
 
-case "$PACKAGE_MANAGER" in
+case "$NODE_PACKAGE_MANAGER" in
     "pnpm")
         npm install -g pnpm
         ;;

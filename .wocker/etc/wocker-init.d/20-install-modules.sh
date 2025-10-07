@@ -1,14 +1,12 @@
 #!/bin/sh
 
-if [ "$NODE_VERSION" = "" ] || [ "$NODE_VERSION" = "none" ]; then
+if [ "$NODE_PACKAGE_MANAGER" = "" ]; then
     echo "No node version found"
     exit 0
 fi
 
-echo "PACKAGE_MANAGER: $PACKAGE_MANAGER";
-
-if [ -f "package.json" ] && [ ! -d "node_modules" ]; then
-    case "$PACKAGE_MANAGER" in
+if [ -f "package.json" ] && { [ ! -d "node_modules" ] || [ "package.json" -nt "node_modules" ]; }; then
+    case "$NODE_PACKAGE_MANAGER" in
         "npm")
             if [ -f "package-lock.json" ]; then
                 npm ci --quiet --no-progress
@@ -27,7 +25,7 @@ if [ -f "package.json" ] && [ ! -d "node_modules" ]; then
             yarn install --silent
             ;;
         *)
-            echo "Error: Invalid package manager name '$PACKAGE_MANAGER'"
+            echo "Error: Invalid package manager name '$NODE_PACKAGE_MANAGER'"
             exit 1
             ;;
     esac

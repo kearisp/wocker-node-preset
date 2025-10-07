@@ -49,8 +49,8 @@ The preset supports common Wocker environment variables, plus:
 
 - `VIRTUAL_PORT`: Default port your node.js application should listen on (provided by nginx-proxy)
 - `NPM_RUN`: Command to start your application (default: "npm start")
-- `PACKAGE_MANAGER`: Choose between npm or yarn (default: "npm")
-- `TZ`: Timezone configuration (default: Europe/Kyiv)
+- `NODE_PACKAGE_MANAGER`: Choose between npm or yarn (default: "npm")
+- `TZ`: Timezone configuration (default: Etc/UTC)
 
 Example of using the environment port in your app:
 

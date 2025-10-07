@@ -7,17 +7,18 @@ LABEL org.wocker.preset="node" \
       org.wocker.description="Preset for node projects"
 
 ARG UID=1000
-ARG PACKAGE_MANAGER="npm"
+ARG GID=1000
+ARG NODE_PACKAGE_MANAGER="npm"
 
 ENV VIRTUAL_PORT=80 \
     TZ="Etc/UTC" \
     NPM_RUN="npm start" \
-    PACKAGE_MANAGER="$PACKAGE_MANAGER"
+    NODE_PACKAGE_MANAGER="$NODE_PACKAGE_MANAGER"
 
 COPY ./.wocker/etc/wocker-build.d /etc/wocker-build.d
 COPY ./.wocker/etc/wocker-init.d /etc/wocker-init.d
-COPY --chown=${UID}:${UID} ./.wocker/bin/ws-run-hook.sh /usr/local/bin/ws-run-hook
-COPY --chown=${UID}:${UID} ./.wocker/bin/entrypoint.sh /usr/local/bin/docker-entrypoint.sh
+COPY --chown=${UID}:${GID} ./.wocker/bin/ws-run-hook.sh /usr/local/bin/ws-run-hook
+COPY --chown=${UID}:${GID} ./.wocker/bin/entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 
 RUN chmod +x /usr/local/bin/ws-run-hook && \
     chmod +x /usr/local/bin/docker-entrypoint.sh && \
