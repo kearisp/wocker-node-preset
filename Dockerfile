@@ -30,4 +30,4 @@ EXPOSE $VIRTUAL_PORT
 USER $UID
 
 ENTRYPOINT ["docker-entrypoint.sh"]
-CMD ["bash", "-c", "${NPM_RUN}"]
+CMD ["sh", "-c", "${NPM_RUN}"]
