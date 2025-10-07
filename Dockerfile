@@ -19,8 +19,7 @@ COPY ./.wocker/etc/wocker-init.d /etc/wocker-init.d
 COPY --chown=${UID}:${UID} ./.wocker/bin/ws-run-hook.sh /usr/local/bin/ws-run-hook
 COPY --chown=${UID}:${UID} ./.wocker/bin/entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 
-RUN set -e; \
-    chmod +x /usr/local/bin/ws-run-hook && \
+RUN chmod +x /usr/local/bin/ws-run-hook && \
     chmod +x /usr/local/bin/docker-entrypoint.sh && \
     ws-run-hook build
 
