@@ -1,6 +1,6 @@
 # Node preset for Wocker
 
-[![Version](https://img.shields.io/badge/version-1.0.7-blue.svg)](https://github.com/kearisp/wocker-node-preset)
+[![Version](https://img.shields.io/badge/version-1.0.8-blue.svg)](https://github.com/kearisp/wocker-node-preset)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)
 
 A lightweight and efficient preset for developing node.js applications with the Wocker workspace.
@@ -49,8 +49,8 @@ The preset supports common Wocker environment variables, plus:
 
 - `VIRTUAL_PORT`: Default port your node.js application should listen on (provided by nginx-proxy)
 - `NPM_RUN`: Command to start your application (default: "npm start")
-- `PACKAGE_MANAGER`: Choose between npm or yarn (default: "npm")
-- `TZ`: Timezone configuration (default: Europe/Kyiv)
+- `NODE_PACKAGE_MANAGER`: Choose between npm or yarn (default: "npm")
+- `TZ`: Timezone configuration (default: Etc/UTC)
 
 Example of using the environment port in your app:
 
