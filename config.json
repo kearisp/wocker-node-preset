@@ -1,6 +1,6 @@
 {
     "name": "node",
-    "version": "1.0.8",
+    "version": "1.0.9",
     "type": "dockerfile",
     "dockerfile": "./Dockerfile",
     "buildArgsOptions": {
@@ -28,6 +28,11 @@
                 "pnpm",
                 "yarn"
             ]
+        },
+        "INSTALL_BASH": {
+            "message": "Install bash?",
+            "type": "boolean",
+            "default": false
         }
     },
     "envOptions": {
