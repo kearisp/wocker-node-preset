@@ -3,15 +3,17 @@ ARG IMAGE_VERSION="${NODE_VERSION}-alpine"
 FROM node:${IMAGE_VERSION}
 
 LABEL org.wocker.preset="node" \
-      org.wocker.version="1.0.8" \
+      org.wocker.version="1.0.9" \
       org.wocker.description="Preset for node projects"
 
 ARG UID=1000
 ARG GID=1000
+ARG INSTALL_BASH="false"
 ARG NODE_PACKAGE_MANAGER="npm"
 
 ENV VIRTUAL_PORT=80 \
     TZ="Etc/UTC" \
+    INSTALL_BASH="$INSTALL_BASH" \
     NPM_RUN="npm start" \
     NODE_PACKAGE_MANAGER="$NODE_PACKAGE_MANAGER"
 
