@@ -1,6 +1,6 @@
 # Node preset for Wocker
 
-[![Version](https://img.shields.io/badge/version-1.0.9-blue.svg)](https://github.com/kearisp/wocker-node-preset)
+[![Version](https://img.shields.io/badge/version-1.0.10-blue.svg)](https://github.com/kearisp/wocker-node-preset)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)
 
 A lightweight and efficient preset for developing node.js applications with the Wocker workspace.
@@ -24,14 +24,6 @@ ws preset:install node
 - 🌐 Built-in timezone configuration (default: Europe/Kyiv)
 
 ## Usage
-
-### Build Scripts
-
-You can mount a directory with custom build scripts that will run on container build:
-
-```shell
-ws volume:mount ./my-build-scripts:/etc/wocker-build.d
-```
 
 ### Initialization Scripts
 
