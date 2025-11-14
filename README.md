@@ -25,14 +25,6 @@ ws preset:install node
 
 ## Usage
 
-### Build Scripts
-
-You can mount a directory with custom build scripts that will run on container build:
-
-```shell
-ws volume:mount ./my-build-scripts:/etc/wocker-build.d
-```
-
 ### Initialization Scripts
 
 You can mount a directory with custom initialization scripts that will run on container startup:
