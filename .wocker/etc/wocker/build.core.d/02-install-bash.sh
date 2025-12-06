@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 
 set -e
 
@@ -18,11 +18,15 @@ if grep -q "Alpine" /etc/os-release; then
         echo "Failed to install bash package on Alpine"
         exit 1
     }
+
+    echo '. <(npm completion)' >> "$(getent passwd "$UID" | cut -d: -f6)/.bashrc"
 else
     apt-get install -y bash || {
         echo "Failed to install bash package on Debian/Ubuntu"
         exit 1
     }
+
+    echo '. <(npm completion)' >> "$(getent passwd "$UID" | cut -d: -f6)/.bashrc"
 fi
 
 echo "Bash successfully installed"
