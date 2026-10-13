@@ -3,8 +3,12 @@ ARG IMAGE_VERSION="${NODE_VERSION}-alpine"
 FROM node:${IMAGE_VERSION}
 
 LABEL org.wocker.preset="node" \
-      org.wocker.version="1.0.12" \
-      org.wocker.description="Preset for node projects"
+      org.wocker.version="1.0.13" \
+      org.wocker.description="Preset for node projects" \
+      wocker.name="node" \
+      wocker.version="1.0.13" \
+      wocker.type="preset" \
+      wocker.description="Preset for node projects"
 
 ARG UID=1000
 ARG GID=1000
